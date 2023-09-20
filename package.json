@@ -1,0 +1,15 @@
+{
+   "name": "clinicorp-test-dev",
+   "version": "1.0.0",
+   "description": "Desenvolver uma aplicação em node, onde seja possível cadastrar e listar tarefas para serem executadas. A aplicação deve funcionar tanto como um servidor express como um CLI. A aplicação deve salvar os dados no FireStore do FireBase.",
+   "main": "app.js",
+   "author": "Arthur Mastropietro",
+   "license": "MIT",
+   "dependencies": {
+      "body-parser": "^1.20.2",
+      "cors": "^2.8.5",
+      "dotenv": "^16.3.1",
+      "express": "^4.18.2",
+      "helmet": "^7.0.0"
+   }
+}
