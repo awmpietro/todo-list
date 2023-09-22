@@ -67,3 +67,6 @@ $RECYCLE.BIN/
 
 # VS Code directories
 .vscode/
+
+src/shared/config/credentials/firestore*
+
