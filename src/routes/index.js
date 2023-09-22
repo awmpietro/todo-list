@@ -1,1 +1,0 @@
-const Tasks = require('./tasks');

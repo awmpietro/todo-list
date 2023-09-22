@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+   tmanager-api:
+      build:
+         context: .
+         dockerfile: ./src/api/Dockerfile
+      image: tmanager-api:latest
+      ports:
+         - '8085:8085'
+      volumes:
+         - ./src/api:/usr/src/app/api
+         - ./src/shared:/usr/src/app/shared
+         - /usr/src/app/node_modules
+      environment:
+         - NODE_ENV=development
+      command: ['yarn', 'dev']
