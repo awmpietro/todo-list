@@ -1,5 +1,12 @@
 const db = require('../config/db');
 
+/**
+ * Retorna todas as tasks salvas no banco de dados.
+ *
+ * @async
+ * @returns {Array<Object>} Um array contendo todas as tasks.
+ * @throws {Error} Algum problema ao consultar o banco de dados.
+ */
 const getTasksService = async () => {
    try {
       const snapshot = await db.collection('tasks').get();
@@ -13,6 +20,14 @@ const getTasksService = async () => {
    }
 };
 
+/**
+ * Insere uma lista de tasks no banco de dados.
+ *
+ * @async
+ * @param {Array<Object>} tasks - A lista de taks a ser inserida.
+ * @param {string} [hostname='computer'] - O nome do host onde a tarefa foi criada.
+ * @throws {Error} Algum problema ao inserir as tarefas no banco de dados.
+ */
 const insertTasksService = async (tasks, hostname = 'computer') => {
    try {
       for (const task of tasks) {
@@ -30,6 +45,14 @@ const insertTasksService = async (tasks, hostname = 'computer') => {
    }
 };
 
+/**
+ * Insere uma única task no banco de dados.
+ *
+ * @async
+ * @param {Object} task - A task a ser inserida.
+ * @param {string} hostname - O nome do host onde a tarefa foi criada.
+ * @throws {Error} Algum problema ao inserir a tarefa no banco de dados.
+ */
 const insertTaskService = async (task, hostname) => {
    try {
       task.computer = hostname;

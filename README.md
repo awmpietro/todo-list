@@ -13,15 +13,17 @@ Desenvolver uma aplicação em node, onde seja possível cadastrar e listar tare
 ## Instalação usando Docker em máquinas Mac ou Linux:
 
 1. Clonar o repositório: [Clinicorp Dev Test](https://github.com/awmpietro/clinicorp-dev-test)
-2. Na raíz, rodar o código: `make init`
+2. Adicionar as chaves de conexão ao Firestore enviadas por email em ./shared/config/credentials
+3. Na raíz, rodar o código: `make init`
    -  Este comando fará a instalação da versão CLI, rodará todos os testes unitários e inicializará a API no docker na porta 8085 do seu localhost.
 
 ## Instalação sem Docker (necessários node v18.16.1 e yarn instalados)
 
 1. Clonar o repositório: [Clinicorp Dev Test](https://github.com/awmpietro/clinicorp-dev-test)
-2. Na raíz do repositório rodar o comando: `yarn install`
-3. Para instalar a CLI rodar o comando: `npm install -g .` (atenção ao ponto após o `-g`)
-4. Para rodar a API, use o comando: `yarn dev` ou `yarn start`. A API ficará exposta na porta 8085.
+2. Adicionar as chaves de conexão ao Firestore enviadas por email em ./shared/config/credentials
+3. Na raíz do repositório rodar o comando: `yarn install`
+4. Para instalar a CLI rodar o comando: `npm install -g .` (atenção ao ponto após o `-g`)
+5. Para rodar a API, use o comando: `yarn dev` ou `yarn start`. A API ficará exposta na porta 8085.
    -  O comando `yarn dev` roda todos os testes unitários e inicia a API em modo de live reloading.
 
 ## Testes
@@ -68,7 +70,7 @@ Para utilizar a linha de comando:
    tmanager --insert '[{ "description": "Criar Login", "responsable": "Arthur", "status": "done" }, { "description": "Criar Menu", "responsable": "Arthur", "status": "doing" }]'
    ```
 
--  Inserir uma lista de tarefas a partir de um arquivo JSON (o caminho é relativo à raiz do projeto):
+-  Inserir uma lista de tarefas a partir de um arquivo JSON (o caminho é relativo de onde está rodando o cmd):
    ```bash
    tmanager --insert < examples/input.json
    ```

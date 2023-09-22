@@ -8,7 +8,6 @@ jest.mock('firebase-admin', () => ({
    firestore: jest.fn(() => ({})),
 }));
 
-// Mock the service account credentials
 const mockServiceAccount = { type: 'service_account' };
 jest.mock('../../config/credentials/firestore-test.json', () => mockServiceAccount);
 

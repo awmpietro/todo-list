@@ -14,10 +14,7 @@ describe('getTasks controller', () => {
    let mockReq, mockRes, mockNext;
 
    beforeEach(() => {
-      // Reset the mock for the service
       getTasksService.mockClear();
-
-      // Mock request, response, and next objects
       mockReq = {};
       mockRes = {
          json: jest.fn(),
@@ -50,10 +47,8 @@ describe('insertTasks controller', () => {
    let mockReq, mockRes, mockNext;
 
    beforeEach(() => {
-      // Reset the mocks for the services
       insertTasksService.mockClear();
 
-      // Mock request, response, and next objects
       mockReq = {
          body: [
             { description: 'Criar Login', responsable: 'bruno', status: 'done' },
@@ -69,7 +64,7 @@ describe('insertTasks controller', () => {
    });
 
    it('should respond with a 201 status when successful', async () => {
-      insertTasksService.mockResolvedValue(); // No value needed, we're assuming success
+      insertTasksService.mockResolvedValue();
 
       await insertTasks(mockReq, mockRes, mockNext);
 
