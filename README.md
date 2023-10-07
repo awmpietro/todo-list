@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Desenvolver uma aplicação em node, onde seja possível cadastrar e listar tarefas para serem executadas. A aplicação deve funcionar tanto como um servidor express como um CLI. A aplicação deve salvar os dados no FireStore do FireBase.
+Example of a todo list written in Node.JS It implements an API and a CLI application sharing same code base using my view of a clean architecture.
 
 ## Requisitos
 
@@ -12,14 +12,14 @@ Desenvolver uma aplicação em node, onde seja possível cadastrar e listar tare
 
 ## Instalação usando Docker em máquinas Mac ou Linux:
 
-1. Clonar o repositório: [Clinicorp Dev Test](https://github.com/awmpietro/clinicorp-dev-test)
+1. Clonar o repositório: [Todo List](https://github.com/awmpietro/todo-list)
 2. Adicionar as chaves de conexão ao Firestore enviadas por email em ./shared/config/credentials
 3. Na raíz, rodar o código: `make init`
    -  Este comando fará a instalação da versão CLI, rodará todos os testes unitários e inicializará a API no docker na porta 8085 do seu localhost.
 
 ## Instalação sem Docker (necessários node v18.16.1 e yarn instalados)
 
-1. Clonar o repositório: [Clinicorp Dev Test](https://github.com/awmpietro/clinicorp-dev-test)
+1. Clonar o repositório: [Todo List](https://github.com/awmpietro/todo-list)
 2. Adicionar as chaves de conexão ao Firestore enviadas por email em ./shared/config/credentials
 3. Na raíz do repositório rodar o comando: `yarn install`
 4. Para instalar a CLI rodar o comando: `npm install -g .` (atenção ao ponto após o `-g`)
